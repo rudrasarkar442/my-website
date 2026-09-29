@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .header {
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end; 
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .header-link, .app-icon, .customize-btn {
+      margin-left: 15px;
+      text-decoration: none;
+      color: rgba(0,0,0,.87);
+      font-size: 13px;
+    }
+
+    .header-link:hover {
+      text-decoration: underline;
+    }
+
+    .app-icon {
+      font-size: 30px;
+      cursor: pointer;
+      color: #000000;
+    }
+
+    .customize-btn {
+    position: fixed; 
+    bottom: 20px;    
+    right: 20px;     
+    z-index: 1000;   
+    
+    
+    border-radius: 50px; 
+    
+   
+    padding: 10px 20px;
+    background-color: #4285F4; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    align-items: center; 
+}
+
+.customize-btn::before {
+    content: '✎'; 
+    margin-right: 8px; 
+    font-size: 18px;
+    line-height: 1; 
+}
+
+.customize-btn:hover {
+    background-color: #3367D6; 
+}
+    
+    
+    .main-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 100px; 
+    }
+    
+    a {
+    text-decoration: none;
+}
+
+    .logo {
+      font-size: 70px;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+    }
+    .logo span:nth-child(1) { color: #4285F4; }
+    .logo span:nth-child(2) { color: #EA4335; }
+    .logo span:nth-child(3) { color: #FBBC05; }
+    .logo span:nth-child(4) { color: #4285F4; }
+    .logo span:nth-child(5) { color: #34A853; }
+    .logo span:nth-child(6) { color: #EA4335; }
+
+    .search-box {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #dcdcdc;
+      border-radius: 25px;
+      padding: 10px 15px;
+      width: 500px;
+      max-width: 90%;
+      box-shadow: 0 2px 5px 1px rgba(64,69,73,.15); 
+    }
+    .search-box:hover {
+      box-shadow: 0 4px 6px 0 rgba(64,69,73,.2);
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      flex: 1;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons input {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      background: #f8f9fa;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .buttons input:hover {
+      border: 1px solid #dcdcdc;
+      box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <a href="https://mail.google.com/" class="header-link">Gmail</a>
+    <a href="https://www.google.com/imghp" class="header-link">Images</a>
+    <a href="https://labs.google.com/search?source=ntp" class="header-link">Search Labs</a>
+
+    <a href="https://www.google.co.in/intl/en/about/products?tab=rh"><span class="app-icon" title="Google apps">&#78033;</span></a>
+    
+    <a href="https://chromewebstore.google.com/category/themes"><button class="customize-btn">Customize Chrome</button></a>
+  </div>
+
+  <div class="main-content">
+    <div class="logo">
+      <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+    </div>
+  
+    <form action="https://www.google.com/search" method="get">
+      <div class="search-box">
+        <input type="text" name="q" placeholder="Ask Google">
+      </div>
+      <div class="buttons">
+        <input type="submit" value="Google Search">
+        <input type="submit" value="I'm Feeling Lucky" name="btnI">
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
